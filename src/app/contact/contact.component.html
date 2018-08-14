@@ -1,0 +1,42 @@
+<br><br><br><br>
+<br><br><br>
+
+<div class="fh5co-contact animate-box">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <strong>Thank you for visiting!</strong><br><br>
+
+ If you'd like to send me a message, please go ahead. No need to open a new tab, write it here!<br><br>
+
+If you'd like to contact me another way, my email address is lenaguinn@gmail.com. 
+      </div>
+      <div class="col-md-8 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+        <form class="row" id="myForm">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input class="form-control" placeholder="Name" id="name" name = "name" type="text" [(ngModel)] = "name">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input class="form-control" placeholder="Email" name = "email" id="email" type="text" [(ngModel)] = "email">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <textarea name="" class="form-control" id="message" name = "email" cols="30" rows="7" placeholder="Message"  [(ngModel)] ="message"></textarea>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+                <button type="submit" (click)="resetForm(myForm); writeUserData(name, email, message)" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#success">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
