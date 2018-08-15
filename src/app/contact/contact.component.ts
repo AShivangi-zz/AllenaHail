@@ -8,6 +8,10 @@ import * as firebase from 'firebase';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+name: string;
+email: string;
+message: string;
+myForm: any;
 
   constructor() { }
 
@@ -15,13 +19,14 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
-   writeUserData(name, email, message) {
-    firebase.database().ref('contact/' + name).set({
-      name: name,
-      email: email,
-      message : message
-    });
-    console.log;
+  writeUserData(n, e, m) {
+    var info = {
+      name: n,
+      email: e,
+      message : m
+    };
+    
+    firebase.database().ref('contact/').child(n+'/').set(info);
   }
 
   resetForm() {

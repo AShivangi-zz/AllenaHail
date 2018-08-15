@@ -30,7 +30,7 @@ If you'd like to contact me another way, my email address is <strong>lenaguinn@g
           </div>
           <div class="col-md-12">
             <div class="form-group">
-                <button type="submit" (click)="resetForm(myForm); writeUserData(name, email, message)" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#success">Submit</button>
+                <button type="submit" (click)="writeUserData(name, email, message); resetForm();" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#success">Submit</button>
             </div>
           </div>
         </form>
